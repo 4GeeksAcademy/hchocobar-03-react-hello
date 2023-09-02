@@ -9,18 +9,18 @@ export const Counter = () => {
   // 3. Dentro de los parentesis, tengo el valor incial de la variable
   const [counter, setCounter] = useState(0);
   const [letter, setLetter] = useState('Letra');
-  const [theme, setTheme] = useState('bg-secondary');
+  const [theme, setTheme] = useState({bg: ' bg-secondary', color: ' text-light'});
   console.log(letter);
 
   function reset() {
     setCounter(0);
     setLetter('Letra inicial');
-    setTheme('bg-primary');
+    setTheme({bg: ' bg-primary', color: ' text-light'});
   }
 
   return (
     <>
-      <div className={"container " + theme}>
+      <div className={"container" + theme.bg + ' ' + theme.color}>
         <h1>Counter</h1>
         <p>{letter}</p>
         <p>{counter}</p>
@@ -28,8 +28,8 @@ export const Counter = () => {
       <div className="container mb-3">
         <div className="btn-group" role="group" aria-label="Basic example">
           <button onClick={reset} type="button" className="btn btn-primary">Reset</button>
-          <button onClick={() => setTheme('bg-warning')} type="button" className="btn btn-success">Warning</button>
-          <button onClick={() => setTheme('bg-danger')} type="button" className="btn btn-warning">Danger</button>
+          <button onClick={() => setTheme({bg: ' bg-warning', color: 'text-dark'})} type="button" className="btn btn-warning">Warning</button>
+          <button onClick={() => setTheme({bg: ' bg-danger', color: ' text-light'})} type="button" className="btn btn-danger">Danger</button>
         </div>
       </div>      <div className="container mb-3">
         <div className="btn-group" role="group" aria-label="Basic example">
