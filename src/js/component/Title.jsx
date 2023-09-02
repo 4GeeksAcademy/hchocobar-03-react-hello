@@ -6,9 +6,9 @@ export const Title = (props) => {
 
   return (
     <div>
-      <h2>{props.title2}</h2>
-      <h3>{props.title3}</h3>
-      <p>{props.clase}</p>
+      <h1 className="mt-3">{props.title}</h1>
+      <h2 className="text-primary mt-2">{props.subtitle}</h2>
+      <p>{props.description}</p>
     </div>
   )
 }
@@ -16,6 +16,7 @@ export const Title = (props) => {
 
 // Specifies the default values for props:
 Title.defaultProps = {
-  title2: 'Tema de la clase',
-  title3: 'Subitulo'
+  title: 'Intro React',
+  subtitle: 'Subitulo',
+  description: ''
 };

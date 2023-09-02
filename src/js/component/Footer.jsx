@@ -8,12 +8,14 @@ const Footer = () => {
 
   // 4. return 1 solo elemento HTML
   return (
-    <p>
+    <>
       <hr />
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-		</p>
+      <h6>
+        Made by
+        <strong className="text-danger"> 4Geeks Academy & Cohort Spain 46, </strong>
+        with love!
+      </h6>
+    </>
   )
 }
 
