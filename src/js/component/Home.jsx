@@ -10,8 +10,6 @@ import { Counter } from "./Counter.jsx";
 import rigoImage from "../../img/rigo-baby.jpg";
 import python from '../../img/logo-python.png';
 import react from '../../img/logo-reactjs.png';
-import hcht from '../../img/logo-hcht-uk.jpg';
-
 
 // 2. Create your first component, primera en letra en Mayúscula.
 const Home = () => {
@@ -27,11 +25,14 @@ const Home = () => {
 			<Title title={title} subtitle={subtitle} description={description} />
 			<Counter/>
 			<div className="container">
-				<Card image={hcht} title='Héctor Chocobar'/>
-				<Card image={python} title='Python' btn="Abrir nueva pestaña"/>
-				<Card image={react}  title='React'/>
-				<Card image={rigoImage} title='4Geeks Academy'/>
+				<Card image={rigoImage} title='Tarjeta 1'/>
+				<Card image={python} title='Otra Tarjeta' btn="Abrir nueva pestaña"/>
+				<Card image={react}  title='Tarjeta'/>
+				<Card title='Tarjeta 4'/>
 			</div>
+			<a href="#" className="btn btn-success">
+				bootstrap
+			</a>
 			<Footer />
 		</div>
 	);

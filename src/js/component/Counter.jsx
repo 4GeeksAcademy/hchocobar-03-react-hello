@@ -9,7 +9,7 @@ export const Counter = () => {
   // 3. Dentro de los parentesis, tengo el valor incial de la variable
   const [counter, setCounter] = useState(0);
   const [letter, setLetter] = useState('Letra');
-  const [theme, setTheme] = useState('bg-secondary');
+  const [theme, setTheme] = useState('');
   console.log(letter);
 
   function reset() {
@@ -20,7 +20,7 @@ export const Counter = () => {
 
   return (
     <>
-      <div className={"container " + theme}>
+      <div className={theme}>
         <h1>Counter</h1>
         <p>{letter}</p>
         <p>{counter}</p>
