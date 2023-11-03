@@ -1,11 +1,13 @@
 // 1. Importando React
 import React from "react";
-import Navbar from "./Navbar.jsx";
-import { Alert } from "./Alert.jsx";
 // Include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+// Importamos nuestros componentes
+import Navbar from "./Navbar.jsx";
+import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { BtnCallAction } from "./BtnCallAction.jsx";
+import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 
 
 // 2. Create your first component
@@ -16,11 +18,12 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			<Navbar />
+			<SimpleCounterBonus/>
+			{/* <Navbar />
 			<Alert />
 			<h1 className="text-center mt-5">Hello Rigo!</h1>
 			<p>
-				{/* <img src={rigoImage} /> */}
+				<img src={rigoImage} />
 			</p>
 			<Spinner/>
 			<BtnCallAction/>
@@ -28,7 +31,7 @@ const Home = () => {
 				Made by{" "}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
 				love!
-			</p>
+			</p> */}
 		</div>
 	);
 };
