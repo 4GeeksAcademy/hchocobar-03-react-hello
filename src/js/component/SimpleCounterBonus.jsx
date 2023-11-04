@@ -18,15 +18,14 @@ export const SimpleCounterBonus = () => {
     if (isActive) {
       setTitle('Simple Counter paused');
       setIsActive(false);
-      setStatus({icon: 'fa fa-stopwatch', 
-                 subtitle: 'Chronometer paused',
-                 subtitleStyle: 'text-center text-warning'});
+      setStatus({...status, subtitleStyle: 'text-center bg-warning'});  // Propagación
     } else {
       setTitle('Simple Counter started');
       setIsActive(true);
       setStatus({icon: 'fa fa-stopwatch', 
-                 subtitle: 'Chronometer paused',
-                 subtitleStyle: 'text-center text-warning'});
+                 subtitle: 'Chronometer',
+                 subtitleStyle: 'text-center text-success'
+                });
     }
   };
 
