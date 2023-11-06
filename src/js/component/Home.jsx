@@ -9,6 +9,7 @@ import { Spinner } from "./Spinner.jsx";
 import { BtnCallAction } from "./BtnCallAction.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { Form } from "./Form.jsx";
+import { Todolist } from "./TodoList.jsx";
 
 
 // 2. Create your first component
@@ -19,7 +20,8 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			<Form/>
+			{/* <Form/> */}
+			<Todolist/>
 			{/* <SimpleCounterBonus/> */}
 			{/* <Navbar />
 			<Alert />
