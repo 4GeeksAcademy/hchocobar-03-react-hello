@@ -8,6 +8,7 @@ import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { BtnCallAction } from "./BtnCallAction.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
+import { Form } from "./Form.jsx";
 
 
 // 2. Create your first component
@@ -18,7 +19,8 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			<SimpleCounterBonus/>
+			<Form/>
+			{/* <SimpleCounterBonus/> */}
 			{/* <Navbar />
 			<Alert />
 			<h1 className="text-center mt-5">Hello Rigo!</h1>
