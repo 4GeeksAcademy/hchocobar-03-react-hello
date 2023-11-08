@@ -21,23 +21,17 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			{/* <Form/> */}
-			{/* <Todolist/> */}
-			<Alert style='success'/>
-			<Spinner/>
-			<CardPlaceholder/>
+			<Form/>
+			<Todolist/>
+			{/* <Alert>Esto es una alerta</Alert> */}
+			{/* <Spinner/> */}
+			{/* <CardPlaceholder/> */}
 			{/* <SimpleCounterBonus/> */}
-			{/* <Navbar />
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<BtnCallAction/>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p> */}
+			{/* <Navbar /> */}
+			{/* <h1 className="text-center mt-5">Hello Rigo!</h1> */}
+			{/* <p><img src={rigoImage} /></p> */}
+			{/* <BtnCallAction/> */}
+			{/* <p>Made by{" "}<a href="http://www.4geeks.com">4Geeks Academy</a>, withlove!</p>  */}
 		</div>
 	);
 };

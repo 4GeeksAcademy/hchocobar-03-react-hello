@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 
+
 export const Todolist = () => {
   // estados
   const [task, setTask] = useState("");
-  const [list, setList] = useState(['Task 01', 'Task 02', 'Task 03', 'Task 04']); 
+  const [list, setList] = useState(['Task 01', 'Task 02', 
+                                    'Task 03', 'Task 04']); 
 
 
-  // funcion onClick del icono trash
-  const deleteTask = (index) => {
-    setList(list.filter((element, id)=>{
-      return index !== id;
+  // Funcion onClick del icono trash
+  const deleteTask = (item) => {
+    setList(list.filter((element, id) => {
+      return item !== element;
     }))
   };
 
 
   const addTask = (event) => {
     event.preventDefault();
-    if (task === "") return;
+    if (task === "") {
+      return
+    };
     setList([...list, task]);
     setTask("");
   }
@@ -24,7 +28,8 @@ export const Todolist = () => {
   
   return (
     <div className="container col-xs-10 col-md-8 col-lg-6 my-3">
-      <h1 className="text-center text-primary">Todos</h1>
+      <h1 className="text-center">Todos</h1>
+      {/* Formulario para agregar tareas */}
       <div className="mb-3">
         <form onSubmit = {addTask}>
           <input className="form-control" placeholder="Write a new task" type="text" 
@@ -32,13 +37,15 @@ export const Todolist = () => {
               onChange={(event)=>{setTask(event.target.value);}}/>
         </form>
       </div>
+
+      {/* Lista de Tareas */}
       <h2 className="text-primary">Todos List</h2>
       <div className="list">
         <ul className="list-group">
           {list.map((item, index) => {
             return <li key={index} className="list-group-item d-flex justify-content-between hidden-icon">
                 {item}
-                <span key={index} onClick={(event) => {deleteTask(index)}}><i className="fas fa-trash"></i></span>
+                <span key={index} onClick={(event) => {deleteTask(item)}}><i className="fas fa-trash text-danger"></i></span>
               </li>
             })
           }

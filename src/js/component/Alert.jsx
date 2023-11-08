@@ -1,16 +1,10 @@
 import React from "react";
 
 
-export const Alert = (props) => {
+export const Alert = ({style='warning', children}) => {
   return (
-    <div className={`alert alert-${props.style}`} role="alert">
-      {props.message}
+    <div className={`alert alert-${style}`} role="alert">
+      {children}
     </div>
   )
-}
-
-
-Alert.defaultProps = {
-  style: 'warning',  // warning, danger, success, primary-light
-  message: 'This message is an alert'
 }

@@ -1,3 +1,4 @@
+/* Simple Counter Bonus*/
 .big-counter {
     text-align: center;
     background: black;
@@ -11,4 +12,14 @@
     color: white;
     padding: 10px;
     margin: 3px;
+}
+
+/* Todo List: ocultar trash */
+.hidden-icon > span {
+    visibility: hidden;
+}
+
+.hidden-icon:hover > span {
+    visibility: visible;
+    color: red;
 }
