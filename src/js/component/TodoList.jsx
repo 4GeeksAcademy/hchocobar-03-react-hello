@@ -4,8 +4,7 @@ import React, { useState } from "react";
 export const Todolist = () => {
   // estados
   const [task, setTask] = useState("");
-  const [list, setList] = useState(['Task 01', 'Task 02', 
-                                    'Task 03', 'Task 04']); 
+  const [list, setList] = useState(['tarea 1', 'tarea 2']);
 
 
   // Funcion onClick del icono trash
@@ -18,7 +17,7 @@ export const Todolist = () => {
 
   const addTask = (event) => {
     event.preventDefault();
-    if (task === "") {
+    if (task.trim() === "") {
       return
     };
     setList([...list, task]);
@@ -38,17 +37,22 @@ export const Todolist = () => {
         </form>
       </div>
 
+
       {/* Lista de Tareas */}
       <h2 className="text-primary">Todos List</h2>
       <div className="list">
         <ul className="list-group">
-          {list.map((item, index) => {
-            return <li key={index} className="list-group-item d-flex justify-content-between hidden-icon">
+
+          {list.map((item, id) => {
+            return <li key={id} className="list-group-item d-flex justify-content-between hidden-icon">
                 {item}
-                <span key={index} onClick={(event) => {deleteTask(item)}}><i className="fas fa-trash text-danger"></i></span>
+                <span key={id} onClick={() => {deleteTask(item)}}>
+                  <i className="fas fa-trash text-danger"></i>
+                </span>
               </li>
             })
           }
+
           <span className="list-group-item bg-light text-end fw-lighter">
               {list.length === 0 ? "No tasks, add a task" : list.length + " Item Left"}
           </span>
@@ -57,3 +61,5 @@ export const Todolist = () => {
     </div>
   );
 };
+
+// agregar el contenido finla del input en el estado list 

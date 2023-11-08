@@ -21,5 +21,4 @@
 
 .hidden-icon:hover > span {
     visibility: visible;
-    color: red;
 }
