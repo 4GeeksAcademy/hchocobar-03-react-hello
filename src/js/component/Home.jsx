@@ -10,6 +10,7 @@ import { BtnCallAction } from "./BtnCallAction.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { Form } from "./Form.jsx";
 import { Todolist } from "./TodoList.jsx";
+import { CardPlaceholder } from "./CardPlaceholder.jsx";
 
 
 // 2. Create your first component
@@ -21,15 +22,16 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			{/* <Form/> */}
-			<Todolist/>
+			{/* <Todolist/> */}
+			<Alert style='success'/>
+			<Spinner/>
+			<CardPlaceholder/>
 			{/* <SimpleCounterBonus/> */}
 			{/* <Navbar />
-			<Alert />
 			<h1 className="text-center mt-5">Hello Rigo!</h1>
 			<p>
 				<img src={rigoImage} />
 			</p>
-			<Spinner/>
 			<BtnCallAction/>
 			<p>
 				Made by{" "}
