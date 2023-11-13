@@ -14,6 +14,7 @@ import { CardPlaceholder } from "./CardPlaceholder.jsx";
 import { Users } from "./Users.jsx";
 import { Todos } from "./Todos.jsx";
 import { JPHUsers } from "./JPHUsers.jsx";
+import { TodoListFetch } from "./TodoListFetch.jsx";
 
 // 2. Create your first component
 // Todo compontente de React comienza con una letra Mayúscula
@@ -23,7 +24,8 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			<JPHUsers/>
+			<TodoListFetch/>
+			{/* <JPHUsers/> */}
 			{/* <Form/> */}
 			{/* <Users/> */}
 			{/* <Todos/> */}

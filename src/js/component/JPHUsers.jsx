@@ -27,8 +27,10 @@ export const JPHUsers = () => {
       method: 'GET'
     }
     const response = await fetch(url, options);
+    console.log(response)
     if (response.ok) {
       const data = await response.json()
+      console.log(data)
       setUsers(data)
     } else {
       // tratamiento del error que me la API
