@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from './Spinner.jsx';
+import { Spinner } from '../component/Spinner.jsx';
 
 
 export const JPHUsers = () => {

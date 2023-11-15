@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [checkMe, setCheckme] = useState(false);
   const [viewPassword, setViewPassword] = useState(false)
+  const navigate = useNavigate();
 
   let verPass = true;
 
@@ -28,6 +29,8 @@ export const Form = () => {
     console.log(email, password, checkMe);
     setEmail('');
     setPassword('');
+    // ir al home
+    navigate('/hola');
   }
 
 

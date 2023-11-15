@@ -3,10 +3,10 @@ import React from "react";
 // Include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 // Importamos nuestros componentes
-import Navbar from "./Navbar.jsx";
-import { Alert } from "./Alert.jsx";
-import { Spinner } from "./Spinner.jsx";
-import { BtnCallAction } from "./BtnCallAction.jsx";
+import Navbar from "../component/Navbar.jsx";
+import { Alert } from "../component/Alert.jsx";
+import { Spinner } from "../component/Spinner.jsx";
+import { BtnCallAction } from "../component/BtnCallAction.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { Form } from "./Form.jsx";
 import { Todolist } from "./TodoList.jsx";
@@ -24,7 +24,7 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML
 	return (
 		<div className="text-center">
-			<TodoListFetch/>
+			{/* <TodoListFetch/> */}
 			{/* <JPHUsers/> */}
 			{/* <Form/> */}
 			{/* <Users/> */}
@@ -35,10 +35,9 @@ const Home = () => {
 			{/* <CardPlaceholder/> */}
 			{/* <SimpleCounterBonus/> */}
 			{/* <Navbar /> */}
-			{/* <h1 className="text-center mt-5">Hello Rigo!</h1> */}
-			{/* <p><img src={rigoImage} /></p> */}
-			{/* <BtnCallAction/> */}
-			{/* <p>Made by{" "}<a href="http://www.4geeks.com">4Geeks Academy</a>, withlove!</p>  */}
+			<h1 className="text-center mt-5">Hello Rigo!</h1>
+			<p><img src={rigoImage} /></p>
+			<BtnCallAction />
 		</div>
 	);
 };
