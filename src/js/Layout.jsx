@@ -1,4 +1,6 @@
 import React from "react";
+import "bootswatch/dist/superhero/bootstrap.min.css";
+// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Importar Componentes
 import Navbar from './component/Navbar.jsx';
