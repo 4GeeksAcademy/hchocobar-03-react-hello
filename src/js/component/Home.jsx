@@ -5,6 +5,8 @@ import Navbar from './Navbar.jsx';
 import { Card }from './Card.jsx';
 import { CardProfile } from "./CardProfile.jsx";
 import { Spinner } from "./Spinner.jsx";
+import { Members } from "./Members.jsx";
+import { Title } from "./Title.jsx";
 
 
 // Create your first component
@@ -12,15 +14,17 @@ import { Spinner } from "./Spinner.jsx";
    multilinea */
 const Home = () => {
 	// Código JS
+	const titulo = 'Intro React!';
 
 	return (
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<Spinner/>
-			<CardProfile/>
-			<Card/>
-			<h1 className="text-center mt-5">Intro React!</h1>
+			<Title/>
+			<Members/>
+			{/* <Spinner/> */}
+			{/* <CardProfile/> */}
+			{/* <Card/> */}
 			<p>
 				Made by{' '}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
