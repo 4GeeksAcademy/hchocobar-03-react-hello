@@ -8,6 +8,7 @@ import { Spinner } from "./Spinner.jsx";
 import { Members } from "./Members.jsx";
 import { Title } from "./Title.jsx";
 import SimpleCounterBonus from "./SimpleCounterBounus.jsx";
+import { Estados } from "./Estados.jsx";
 
 
 // Create your first component
@@ -22,6 +23,7 @@ const Home = () => {
 			{/* 7. utilizar el componente */}
 			<Navbar/>
 			<SimpleCounterBonus/>
+			<Estados/>
 			{/* <Title/> */}
 			{/* <Members/> */}
 			{/* <Spinner/> */}
