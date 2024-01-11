@@ -22,8 +22,8 @@ const Home = () => {
 			{/* 7. utilizar el componente */}
 			<Navbar/>
 			<SimpleCounterBonus/>
-			<Title/>
-			<Members/>
+			{/* <Title/> */}
+			{/* <Members/> */}
 			{/* <Spinner/> */}
 			{/* <CardProfile/> */}
 			{/* <Card/> */}

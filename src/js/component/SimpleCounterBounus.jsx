@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+// 1. importo React y los Hooks
+import React, { useState, useEffect }from "react";
 
 
+// 2. Creando mi componente tipo funcion
 function SimpleCounterBonus() {
+  // Todo código JS
   const [isActive, setIsActive] = useState(false);
   const [counter, setCounter] = useState(0);
   const [countDown, setCountDown] = useState(false);
@@ -52,6 +55,9 @@ function SimpleCounterBonus() {
   }
 
 
+  // tiene dos parámetros,
+  // el primero es una funcion,
+  // el segundo es un array (es opcional)
   useEffect(() => {
     if (isActive) {
       const nIntervalId = setInterval(() => {
@@ -62,8 +68,9 @@ function SimpleCounterBonus() {
           } else {
             setCounter(counter => counter - 1);
           }
-        } else if (countDown === false) {
-          setCounter(counter => counter + 1);
+        } else 
+          if (countDown === false) {
+           setCounter(counter => counter + 1);
         }
       }, 10);
       return () => clearInterval(nIntervalId);
@@ -71,6 +78,7 @@ function SimpleCounterBonus() {
   }, [isActive, counter, countDown]);
 
 
+  // 4. Retorno un solo elemento HTML
   return (
     <div>
       <h1 className="text-center mt-5">{"Simple Counter"}</h1>
@@ -110,4 +118,5 @@ function SimpleCounterBonus() {
 };
 
 
+// 5. Exporto mi componetente
 export default SimpleCounterBonus;
