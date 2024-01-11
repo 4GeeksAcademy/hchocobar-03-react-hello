@@ -7,6 +7,7 @@ import { CardProfile } from "./CardProfile.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { Members } from "./Members.jsx";
 import { Title } from "./Title.jsx";
+import { Estados } from "./Estados.jsx";
 
 
 // Create your first component
@@ -20,8 +21,9 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<Title/>
-			<Members/>
+			<Estados/>
+			{/* <Title/> */}
+			{/* <Members/> */}
 			{/* <Spinner/> */}
 			{/* <CardProfile/> */}
 			{/* <Card/> */}
