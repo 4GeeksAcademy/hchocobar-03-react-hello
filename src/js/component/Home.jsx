@@ -7,6 +7,7 @@ import { CardProfile } from "./CardProfile.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { Members } from "./Members.jsx";
 import { Title } from "./Title.jsx";
+import SimpleCounterBonus from "./SimpleCounterBounus.jsx";
 import { Estados } from "./Estados.jsx";
 
 
@@ -21,6 +22,7 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
+			<SimpleCounterBonus/>
 			<Estados/>
 			{/* <Title/> */}
 			{/* <Members/> */}
