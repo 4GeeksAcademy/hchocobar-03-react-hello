@@ -9,6 +9,7 @@ import { Members } from "./Members.jsx";
 import { Title } from "./Title.jsx";
 import SimpleCounterBonus from "./SimpleCounterBounus.jsx";
 import { Estados } from "./Estados.jsx";
+import { Form } from "./Form.jsx";
 
 
 // Create your first component
@@ -22,9 +23,10 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<SimpleCounterBonus/>
-			<Estados/>
-			{/* <Title/> */}
+			<Title subtitulo="Entradas Controladas"/>
+			<Form/>
+			{/* <SimpleCounterBonus/> */}
+			{/* <Estados/> */}
 			{/* <Members/> */}
 			{/* <Spinner/> */}
 			{/* <CardProfile/> */}
