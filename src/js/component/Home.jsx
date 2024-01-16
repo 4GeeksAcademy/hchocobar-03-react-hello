@@ -10,6 +10,7 @@ import { Title } from "./Title.jsx";
 import SimpleCounterBonus from "./SimpleCounterBounus.jsx";
 import { Estados } from "./Estados.jsx";
 import { Form } from "./Form.jsx";
+import { TodoList } from "./TodoList.jsx";
 
 
 // Create your first component
@@ -23,8 +24,9 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<Title subtitulo="Entradas Controladas"/>
-			<Form/>
+			<Title subtitulo="TodoList y Repaso de React"/>
+			<TodoList/>
+			{/* <Form/> */}
 			{/* <SimpleCounterBonus/> */}
 			{/* <Estados/> */}
 			{/* <Members/> */}
