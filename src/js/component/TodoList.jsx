@@ -47,6 +47,9 @@ export const TodoList = () => {
               </span>
             </li>)
             }
+            <span className="list-group-item bg-light text-end fw-lighter">
+                {list.length === 0 ? "No tasks, add a task" : list.length + " Item Left"}
+            </span>          
           </ul>
         </div>
       </div>
