@@ -11,6 +11,7 @@ import SimpleCounterBonus from "./SimpleCounterBounus.jsx";
 import { Estados } from "./Estados.jsx";
 import { Form } from "./Form.jsx";
 import { TodoList } from "./TodoList.jsx";
+import { JasonPlaceHolder } from "./JasonPlaceHolder.jsx";
 
 
 // Create your first component
@@ -24,8 +25,9 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<Title subtitulo="TodoList y Repaso de React"/>
-			<TodoList/>
+			<Title subtitulo="Consumiendo un API"/>
+			<JasonPlaceHolder/>
+			{/* <TodoList/> */}
 			{/* <Form/> */}
 			{/* <SimpleCounterBonus/> */}
 			{/* <Estados/> */}
