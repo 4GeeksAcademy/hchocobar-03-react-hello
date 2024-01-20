@@ -12,6 +12,9 @@ import { Estados } from "./Estados.jsx";
 import { Form } from "./Form.jsx";
 import { TodoList } from "./TodoList.jsx";
 import { JasonPlaceHolder } from "./JasonPlaceHolder.jsx";
+import { Users } from "./Users.jsx";
+import { TodosJPH } from "./TodosJPH.jsx";
+import { PostsJPH } from "./PostsJPH.jsx";
 
 
 // Create your first component
@@ -25,8 +28,11 @@ const Home = () => {
 		<div className="text-center">
 			{/* 7. utilizar el componente */}
 			<Navbar/>
-			<Title subtitulo="Consumiendo un API"/>
+			<Title titulo='React Web' subtitulo="Consumiendo una API"/>
+			<PostsJPH/>
+			<TodosJPH/>
 			<JasonPlaceHolder/>
+			{/* <Users/> */}
 			{/* <TodoList/> */}
 			{/* <Form/> */}
 			{/* <SimpleCounterBonus/> */}
@@ -35,11 +41,11 @@ const Home = () => {
 			{/* <Spinner/> */}
 			{/* <CardProfile/> */}
 			{/* <Card/> */}
-			<p>
+			{/* <p>
 				Made by{' '}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
 				love!
-			</p>
+			</p> */}
 		</div>
 	);
 };
