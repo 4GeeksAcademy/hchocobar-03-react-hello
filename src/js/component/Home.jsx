@@ -15,6 +15,7 @@ import { JasonPlaceHolder } from "./JasonPlaceHolder.jsx";
 import { Users } from "./Users.jsx";
 import { TodosJPH } from "./TodosJPH.jsx";
 import { PostsJPH } from "./PostsJPH.jsx";
+import { TodoListFetch } from "./TodoListFetch.jsx";
 
 
 // Create your first component
@@ -29,9 +30,10 @@ const Home = () => {
 			{/* 7. utilizar el componente */}
 			<Navbar/>
 			<Title titulo='React Web' subtitulo="Consumiendo una API"/>
-			<PostsJPH/>
-			<TodosJPH/>
-			<JasonPlaceHolder/>
+			<TodoListFetch/>
+			{/* <PostsJPH/> */}
+			{/* <TodosJPH/> */}
+			{/* <JasonPlaceHolder/> */}
 			{/* <Users/> */}
 			{/* <TodoList/> */}
 			{/* <Form/> */}
