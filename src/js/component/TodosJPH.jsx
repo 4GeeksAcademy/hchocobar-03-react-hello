@@ -38,13 +38,14 @@ export const TodosJPH = () => {
   // 4
   return (
     <div className="container">
-      <h1 className="text-success">Todos de JSON Place Holder</h1>
+      <h1 className="text-success">API JSON Place Holder</h1>
       <div>
+        <h2 className="text-primary">Todos</h2>
         {/* Renderizado condional segun el estado  */}
         {!todos ? <Spinner/> : 
         <ul className="list-group">
           {todos.map((item) => <li key={item.id} className="list-group-item">
-            <span>{item.completed ? <i className="fas fa-thumbs-up"></i> : <i className="fas fa-times-circle"></i>}</span>
+            <span>{item.completed ? <i className="fas fa-thumbs-up text-success"></i> : <i className="fas fa-times-circle text-danger"></i>}</span>
             {' - ' + item.title}
             </li>)}
         </ul>

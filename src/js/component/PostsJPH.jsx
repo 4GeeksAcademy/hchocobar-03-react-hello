@@ -6,7 +6,7 @@ export const PostsJPH = () => {
   const [ posts, setPosts ] = useState();
   const base_url = 'https://jsonplaceholder.typicode.com';
 
-  // get
+  // Get
   const getPosts = async () => {
     const url = base_url + '/posts';
     const options = {
@@ -23,7 +23,7 @@ export const PostsJPH = () => {
     setPosts(data)
   }
 
-  // post
+  // Post
   const postPosts = async () => {
     const dataToSend = {
       title: 'Nuevo Post',
@@ -50,7 +50,7 @@ export const PostsJPH = () => {
 
   }
 
-  // put
+  // Put
   const putPosts = async () => {
     const dataToSend = {
       id: 20,
@@ -76,7 +76,7 @@ export const PostsJPH = () => {
     setPosts([data, ...posts])
   }
 
-  // delete
+  // Delete
   const deletePosts = async () => {
     const url = base_url + '/posts/20';
     const options = {
@@ -113,15 +113,16 @@ export const PostsJPH = () => {
           Delete Post
         </button>
         {!posts ? <Spinner/> : 
-        <ul>
-          {posts.map((item) => <li key={item.id}>
-            {item.id + ' --- ' + item.title}
-            </li>)
-          }
-        </ul>
+          <ul className="list-group text-start mt-4">
+            {posts.map((item) => 
+              <li key={item.id} className="list-group-item">
+                {item.id + ' - ' + item.title}
+              </li>
+              )
+            }
+          </ul>
         }
       </div>
-
     </div>
   )
 }
