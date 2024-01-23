@@ -35,8 +35,9 @@ export const Users = () => {
 
   return (
     <div className="container">
-      <h1 className="text-success">Users</h1>
+      <h1 className="text-success">API - JSON Place Holder</h1>
       <div>
+        <h2 className="text-primary">Users</h2>
         {!user ? <Spinner/> : 
           <ul className="list-group">
             {user.map((item) => <li key={item.id} className="list-group-item">

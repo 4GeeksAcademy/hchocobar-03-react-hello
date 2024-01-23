@@ -27,8 +27,9 @@ export const JasonPlaceHolder = () => {
 
   return (
     <div className="container">
-      <h1>API - JSON Place Holder</h1>
+      <h1 className="text-success">API - JSON Place Holder</h1>
       <div>
+        <h1 className="text-primary mb-3">Users</h1>
         {!users ? <Spinner/> : 
         <>
           {users.map((item)=> <p>{item.name}</p>)}
