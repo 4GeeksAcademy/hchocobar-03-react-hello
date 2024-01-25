@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
-import { Spinner } from "./Spinner";
+import React, { useState, useEffect } from "react";
+import { Spinner } from "../component/Spinner";
 
 
 export const PostsJPH = () => {
-  const [ posts, setPosts ] = useState();
+  const [posts, setPosts] = useState();
   const base_url = 'https://jsonplaceholder.typicode.com';
 
   // Get
@@ -112,13 +112,13 @@ export const PostsJPH = () => {
         <button className="btn btn-danger ms-3" onClick={deletePosts}>
           Delete Post
         </button>
-        {!posts ? <Spinner/> : 
+        {!posts ? <Spinner /> :
           <ul className="list-group text-start mt-4">
-            {posts.map((item) => 
+            {posts.map((item) =>
               <li key={item.id} className="list-group-item">
                 {item.id + ' - ' + item.title}
               </li>
-              )
+            )
             }
           </ul>
         }

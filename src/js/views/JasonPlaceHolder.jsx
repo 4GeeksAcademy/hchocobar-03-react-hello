@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
-import { Spinner } from "./Spinner";
+import React, { useState, useEffect } from "react";
+import { Spinner } from "../component/Spinner";
 
 
 export const JasonPlaceHolder = () => {
-  const [ users, setUsers ] = useState()
+  const [users, setUsers] = useState()
   const url = 'https://jsonplaceholder.typicode.com/users';
   const options = {};  // si no defino un method, entonces asume que en un GET
 
@@ -23,19 +23,19 @@ export const JasonPlaceHolder = () => {
 
   useEffect(() => {
     getUsers();
-  },[])
+  }, [])
 
   return (
     <div className="container">
       <h1 className="text-success">API - JSON Place Holder</h1>
       <div>
         <h1 className="text-primary mb-3">Users</h1>
-        {!users ? <Spinner/> : 
-        <>
-          {users.map((item)=> <p>{item.name}</p>)}
-        </>}
+        {!users ? <Spinner /> :
+          <>
+            {users.map((item) => <p>{item.name}</p>)}
+          </>}
       </div>
-  
+
 
 
     </div>

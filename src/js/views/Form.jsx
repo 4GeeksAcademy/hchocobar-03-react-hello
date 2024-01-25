@@ -1,5 +1,7 @@
 // 1. Iomportamos React y Hooks
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
+
 
 // 5. y 2.
 export const Form = () => {
@@ -11,6 +13,8 @@ export const Form = () => {
   const [checkMe, setCheckMe] = useState(false);
   const [select, setSelect] = useState();
   const [viewPassword, setViewPassword] = useState(false);
+  
+  const navigate = useNavigate()
 
 
   function handleEmail(event) { setEmail(event.target.value) };
@@ -30,6 +34,8 @@ export const Form = () => {
     setPassword("");
     setSelect("1");
     setCheckMe(false);
+    // Ir a un componente tipo dashboard, por ejemplo al todolist con fetch
+    navigate('/todolist-fetch')
   }
 
   const handleReset = () => {
@@ -37,6 +43,16 @@ export const Form = () => {
     setPassword("");
     setSelect("1");
     setCheckMe(false);
+  }
+
+  const handleUser1 = () => {
+    const enlace = '/user/' + '1'
+    navigate(enlace)
+  }
+
+  const handleUser2 = () => {
+    const enlace = '/user/' + '2'
+    navigate(enlace)
   }
 
   // 4. Retornamos un solo elemento html
@@ -73,6 +89,11 @@ export const Form = () => {
         </div>
         <button type="submit" className="btn btn-primary me-3">Submit</button>
         <button type="reset" onClick={handleReset} className="btn btn-secondary">Cancel</button>
+
+        <button type="button" onClick={handleUser1} className="btn btn-primary me-3">User 1</button>
+        <button type="button" onClick={handleUser2} className="btn btn-primary me-3">User 2</button>
+
+
       </form>
     </div>
   )

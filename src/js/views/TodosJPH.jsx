@@ -1,6 +1,6 @@
 // 1.
-import React, {useState, useEffect} from "react";
-import { Spinner } from "./Spinner";
+import React, { useState, useEffect } from "react";
+import { Spinner } from "../component/Spinner";
 
 
 // 5 y 2
@@ -30,7 +30,7 @@ export const TodosJPH = () => {
     setTodos(data)
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     getTodos()
   }, [])
 
@@ -42,13 +42,13 @@ export const TodosJPH = () => {
       <div>
         <h2 className="text-primary">Todos</h2>
         {/* Renderizado condional segun el estado  */}
-        {!todos ? <Spinner/> : 
-        <ul className="list-group">
-          {todos.map((item) => <li key={item.id} className="list-group-item">
-            <span>{item.completed ? <i className="fas fa-thumbs-up text-success"></i> : <i className="fas fa-times-circle text-danger"></i>}</span>
-            {' - ' + item.title}
+        {!todos ? <Spinner /> :
+          <ul className="list-group">
+            {todos.map((item) => <li key={item.id} className="list-group-item">
+              <span>{item.completed ? <i className="fas fa-thumbs-up text-success"></i> : <i className="fas fa-times-circle text-danger"></i>}</span>
+              {' - ' + item.title}
             </li>)}
-        </ul>
+          </ul>
         }
       </div>
     </div>
