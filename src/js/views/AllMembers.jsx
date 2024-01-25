@@ -2,7 +2,7 @@ import React from "react";  // 1.
 
 
 // 5. y 2.
-export const AllMembers = () => {
+export const  = () => {
   // 3 Código de JS
   const members = ['Carlos', 'Alexandre', 'Matteo', 'Annie', 'Don Beta', 'Irene', 'Davide', 'Mercedes', 'Pedro', 'Elisa']
   console.log(members)
