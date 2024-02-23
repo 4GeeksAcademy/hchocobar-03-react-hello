@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 export const TodoListFetch = () => {
-  // estados
+  // Estados
   const [task, setTask] = useState("");
   const [user, setUser] = useState('hector')
   const [list, setList] = useState([]);  // array de objetos.
@@ -18,7 +18,7 @@ export const TodoListFetch = () => {
         "Content-type": "application/json"
       }
     };
-
+    // Enviamos la solicitud (request) y esperamos la respuesta (response)
     const response = await fetch(url, options);
     if (!response.ok) {
       // Tratamos el error
@@ -30,13 +30,13 @@ export const TodoListFetch = () => {
     getTodoList();
   }
 
-  // Get
+  // Get - Obtenemos todos los TODOS desde la API
   const getTodoList = async () => {
     const url = url_base + '/user/' + user;
     const options = {
       method: "GET"
     };
-
+    // Enviamos la solicitud (request) y esperamos la respuesta (response)
     const response = await fetch(url, options)
     if (!response.ok) {
       // Tratamos el error
@@ -48,9 +48,8 @@ export const TodoListFetch = () => {
     setList(data);
   }
 
-  // Put
-  const updateTodoList = async (newTask) => {
-    const dataToSend = [...list, newTask]
+  // Put - Actualizamos los TODOS enviando una la nueva lista
+  const updateTodoList = async (dataToSend) => {
     const url = url_base + '/user/' + user;
     const options = {
       method: "PUT",
@@ -59,7 +58,7 @@ export const TodoListFetch = () => {
         "Content-type": "application/json"
       }
     }
-
+    // Enviamos la solicitud (request) y esperamos la respuesta (response)
     const response = await fetch( url, options);
     if (!response.ok) {
       // Tratamos el error
@@ -68,16 +67,16 @@ export const TodoListFetch = () => {
     }
     const data = await response.json();
     console.log(data);
-    getTodoList();
+    getTodoList();  // Obetenemos los TODOS desde la API
   }
 
-  // Delete
+  // Delete - Eliminamos al usuario y su lista de TODOS
   const deleteTodoList = async () => {
     const url = url_base + '/user/' + user;
     const options = {
       method: "DELETE"
     };
-
+    // Enviamos la solicitud (request) y esperamos la respuesta (response)
     const response = await fetch(url, options);
     if (!response.ok) {
       // Tratamos el error
@@ -89,34 +88,11 @@ export const TodoListFetch = () => {
     setList([])
   }
 
-  const deleteTaskFetch = async () => {
-    const url = url_base + '/user/' + user;
-    const options = {
-      method: "PUT",
-      body: JSON.stringify(list),
-      headers: {
-        "Content-type": "application/json"
-      }
-    }
-
-    const response = await fetch(url, options);
-    // validar la respuesta
-    if (!response.ok) {
-      // Tratamos el error
-      console.log('Error: ', response.status, response.statusText)
-      return response.status
-    }
-    const data = await response.json();
-    console.log(data);
-    getTodoList();
-  }
-
   // Funcion onClick del icono trash
   const deleteTask = (item) => {
-    setList(list.filter((element, id) => {
-      return item !== element;
-    }))
-    const tarea = () => deleteTaskFetch();
+    // Creamos una nueva lista filtrando el item a borrar, por lo tanto, contiene todos items distitos al item a borrar
+    const filterTodos = list.filter(element => item !== element)
+    updateTodoList(filterTodos);  // actualizo la API con la lista nueva
   };
 
   // Función onSubmit del formualario
@@ -126,16 +102,17 @@ export const TodoListFetch = () => {
       return
     };
     const newTask = {label: task, done: false}
-    updateTodoList(newTask)  // nuevo
+    const newList = [...list, newTask]
+    updateTodoList(newList)  // nuevo
     setTask('');
-    // setList([...list, newTask]);
-    // setTask("");
   }
 
 
   return (
     <div className="container col-xs-10 col-md-8 col-lg-6 my-3">
       <h1 className="text-center">TodoList API</h1>
+
+      {/* Botones */}
       <button onClick={createTodoList} className="btn btn-primary m-3">Crear TodoList</button>
       <button onClick={getTodoList} className="btn btn-warning m-3">Obtener Tareas</button>
       <button onClick={deleteTodoList} className="btn btn-danger m-3">Borrar TodoList</button>
@@ -153,15 +130,14 @@ export const TodoListFetch = () => {
       <h2 className="text-primary mt-2">Todos List</h2>
       <div className="list">
         <ul className="list-group">
-          {list.map((item, id) => {
-            return <li key={id} className="list-group-item d-flex justify-content-between hidden-icon">
+          {list.map((item, id) => 
+            <li key={id} className="list-group-item d-flex justify-content-between hidden-icon">
               {item.label} - {item.done ? 'terminado' : 'pendiente'}
               <span key={id} onClick={() => { deleteTask(item) }}>
                 <i className="fas fa-trash text-danger"></i>
               </span>
             </li>
-          })
-          }
+          )}
           <span className="list-group-item bg-light text-end fw-lighter">
             {list.length === 0 ? "No tasks, add a task" : list.length + " Item Left"}
           </span>
@@ -170,5 +146,3 @@ export const TodoListFetch = () => {
     </div>
   );
 };
-
-// agregar el contenido finla del input en el estado list 
