@@ -11,6 +11,8 @@ import Jumbotron from "./Jumbotron.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { Card } from "./Card.jsx";
 import { Alert } from "./Alert.jsx";
+import { StateExample } from "./StateExample.jsx";
+import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -21,8 +23,10 @@ const Home = () => {
 	// 4. Retornamos HTML -> un solo elemento HTML	
 	return (
 		<div className="text-center">
+			<SimpleCounterBonus />
 			<Navbar />
-			<Alert />
+			<StateExample />
+			{/* <Alert />
 			<div className="container d-flex">
 				<Card title={'Python'}
 					description={'Una descripción para Python'}
@@ -46,7 +50,7 @@ const Home = () => {
 				Made by{" "}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
 				love!
-			</p>
+			</p> */}
 		</div>
 	);
 };
