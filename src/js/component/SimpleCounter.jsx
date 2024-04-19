@@ -1,41 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 export const SimpleCounter = () => {
   const [counter, setCounter] = useState(0);
   const [isRunning, setIsRunning] = useState(false)
-  const [textStart, setTextStart] = useState('Start');
-  const [title, setTitle] = useState('Clock')
-  const [icon, setIcon] = useState("far fa-clock")
+  const [status, setStatus] = useState({
+    title: 'Clock',
+    icon: "far fa-clock",
+    titleStyles: 'text-primary'
+  })
 
   const handleStart = () => {
-    if (!isRunning) {
-      setIsRunning(true);
-      setTextStart('Stop')
-      setTitle('Chronometer')
-      setIcon("fas fa-stopwatch")
+    setIsRunning(!isRunning)
+    setStatus({
+      title: 'Chronometer',
+      icon: "fas fa-stopwatch",
+      titleStyles: 'text-success'
+    })
+  }
+
+  const handleReset = () => {
+    setCounter(0);
+    setIsRunning(false);
+    setStatus({
+      title: 'Clock',
+      icon: "far fa-clock",
+      titleStyles: 'text-primary'
+    })
+  }
+
+
+
+
+  useEffect(() => {
+    if (isRunning) {
       const newInterval = setInterval(() => {
-        setCounter((counter) => { return counter + 1 })
+        setCounter(counter => counter + 1)
       }, 10)
-    } else {
-      // clearInterval(newInterval)
-      setIsRunning(false)
-      setTextStart('Start')
+      return () => clearInterval(newInterval)
     }
-  }
+    
+  }, [ isRunning ])
 
-
-
-  const interval = () => {
-
-  }
 
   return (
     <div className="container">
       <h1>Simple Counter</h1>
-      <h2 className={"text-primary"}>{title}</h2>
+      <h2 className={status.titleStyles}>{status.title}</h2>
       <div className="big-counter">
-        <div><i className={icon}></i></div>
+        <div><i className={status.icon}></i></div>
         <div>{Math.floor(counter / 100000000 % 10)}</div>
         <div>{Math.floor(counter / 10000000 % 10)}</div>
         <div>{Math.floor(counter / 1000000 % 10)}</div>
@@ -49,9 +62,11 @@ export const SimpleCounter = () => {
         <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
 
           <button onClick={handleStart} type="button" className="btn btn-outline-success">
-            {textStart}
+            {/* {cond1 ? verd1   : cond2         ? verd2   : falso2} -  */}
+            {isRunning ? 'Pause' : counter === 0 ? 'Start' : 'Continue'}
+
           </button>
-          <button type="button" className="btn btn-outline-danger">
+          <button onClick={handleReset} type="button" className="btn btn-outline-danger">
             Reset
           </button>
 
