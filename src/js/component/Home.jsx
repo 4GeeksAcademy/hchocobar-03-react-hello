@@ -15,6 +15,7 @@ import { StateExample } from "./StateExample.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { TrafficLight } from "./TrafficLight.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
+import { Login } from "./Login.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -25,13 +26,14 @@ const Home = () => {
 	// 4. Retornamos HTML -> un solo elemento HTML	
 	return (
 		<div className="text-center">
-			<TrafficLight />
+			<Navbar />
+			<Alert />
+			<Login />
 			{/* 
+			<TrafficLight />
 			<SimpleCounterBonus />
 			<SimpleCounter />
-			<Navbar />
 			<StateExample />
-			<Alert />
 			<div className="container d-flex">
 				<Card title={'Python'}
 					description={'Una descripción para Python'}
