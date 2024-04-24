@@ -16,6 +16,7 @@ import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { TrafficLight } from "./TrafficLight.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
+import { TodoList } from "./TodoList.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -28,8 +29,9 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar />
 			<Alert />
-			<Login />
+			<TodoList />
 			{/* 
+			<Login />
 			<TrafficLight />
 			<SimpleCounterBonus />
 			<SimpleCounter />
