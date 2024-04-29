@@ -17,6 +17,10 @@ import { TrafficLight } from "./TrafficLight.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { TodoList } from "./TodoList.jsx";
+import { UsersJPH } from "./UsersJPH.jsx";
+import { TodosJPH } from "./TodosJPH.jsx";
+import { AlbumsJPH } from "./AlbumsJPH.jsx";
+import { PostsJPH } from "./PostsJPH.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -28,9 +32,13 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar />
+			<PostsJPH/>
+			{/* 
+			<AlbumsJPH />
+			<TodosJPH />
+			<UsersJPH />
 			<Alert />
 			<TodoList />
-			{/* 
 			<Login />
 			<TrafficLight />
 			<SimpleCounterBonus />
