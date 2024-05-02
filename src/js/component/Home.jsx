@@ -21,6 +21,7 @@ import { UsersJPH } from "./UsersJPH.jsx";
 import { TodosJPH } from "./TodosJPH.jsx";
 import { AlbumsJPH } from "./AlbumsJPH.jsx";
 import { PostsJPH } from "./PostsJPH.jsx";
+import { TodoListWithFetch } from "./TodoListWithFetch.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -32,8 +33,9 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar />
-			<PostsJPH/>
+			<TodoListWithFetch/>
 			{/* 
+			<PostsJPH/>
 			<AlbumsJPH />
 			<TodosJPH />
 			<UsersJPH />
