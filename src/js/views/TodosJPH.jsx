@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Spinner } from "./Spinner";
+import { Spinner } from "../component/Spinner";
 
 
 export const TodosJPH = () => {
@@ -36,12 +36,12 @@ export const TodosJPH = () => {
       <>
         {!todos ? <Spinner /> :
           <ul className="list-group">
-            {todos.map((item) => 
+            {todos.map((item) =>
               <li key={item.id} className="list-group-item">
-                {item.completed ? <i className="text-success fas fa-thumbs-up"></i> : <i className="text-danger fas fa-ban"></i> }
+                {item.completed ? <i className="text-success fas fa-thumbs-up"></i> : <i className="text-danger fas fa-ban"></i>}
                 {item.title}
               </li>
-          )}
+            )}
           </ul>
         }
       </>

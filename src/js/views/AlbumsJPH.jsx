@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from "./Spinner";
+import { Spinner } from "../component/Spinner";
 
 
 export const AlbumsJPH = () => {
@@ -34,11 +34,11 @@ export const AlbumsJPH = () => {
   return (
     <div className="container">
       {!albums ? <Spinner /> :
-      <ul className="list-group">
-        <li className="list-group-item">Tenenemos datos</li>
-        {albums.map((item) => 
-          <li key={item.id} className="list-group-item">{item.title}</li>)}
-      </ul>
+        <ul className="list-group">
+          <li className="list-group-item">Tenenemos datos</li>
+          {albums.map((item) =>
+            <li key={item.id} className="list-group-item">{item.title}</li>)}
+        </ul>
       }
     </div>
   )

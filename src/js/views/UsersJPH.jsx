@@ -1,6 +1,6 @@
 // 1.
 import React, { useEffect, useState } from "react";
-import { Spinner } from "./Spinner";
+import { Spinner } from "../component/Spinner";
 
 /* 
 1. Definimos una arrow function, y la denominamos con un nombre significativo, en este ejemplo getData
@@ -15,7 +15,7 @@ import { Spinner } from "./Spinner";
 
 // 5. y 2.
 export const UsersJPH = () => {
-  const [ users, setUsers] = useState()
+  const [users, setUsers] = useState()
   const host = 'https://jsonplaceholder.typicode.com'
   // 3. 
   // esta funcion es "asincrona" porque esta solicitando info al otro lado del mundo.
@@ -29,7 +29,7 @@ export const UsersJPH = () => {
       // Tratamos el error
       console.log('Error: ', response.ok, response.status, response.statusText);
       // El return es muy importante, salimos de la función
-      return  'Error: ' + response.status + ' - ' + response.statusText
+      return 'Error: ' + response.status + ' - ' + response.statusText
     }
     console.log('Esto se ejecuta si la resputas es true');
     // console.log(response);
@@ -48,9 +48,17 @@ export const UsersJPH = () => {
   return (
     <div className="container text-start">
       <h1 className="text-center text-success">Consumiendo APIs con fetch()</h1>
-      {!users ? <Spinner /> : 
+      {!users ? <Spinner /> :
         <ul className="list-group">
-          {users.map((item) => <li key={item.id} className="list-group-item">{item.name}</li>)}
+          {users.map((item) =>
+            <li key={item.id} className="list-group-item d-flex justify-content-between">
+              {item.name}
+              <div>
+                <span className="text-primary me-2"><i className="far fa-eye"></i></span>
+                <span className="text-success me-2"><i className="far fa-edit"></i></span>
+                <span className="text-danger"><i className="fas fa-trash"></i></span>
+              </div>
+            </li>)}
         </ul>
       }
     </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from './Spinner.jsx'
+import { Spinner } from '../component/Spinner.jsx'
 
 
 export const TodoListWithFetch = () => {
@@ -152,7 +152,7 @@ export const TodoListWithFetch = () => {
                 onChange={(event) => setCurrentTodo({ ...currentTodo, label: event.target.value })}
               />
               <div className="mb-3 form-check">
-                <input type="checkbox" className="form-check-input" id="exampleCheck1" 
+                <input type="checkbox" className="form-check-input" id="exampleCheck1"
                   checked={currentTodo.is_done}
                   onChange={(event) => setCurrentTodo({ ...currentTodo, is_done: event.target.checked })}
                 />
