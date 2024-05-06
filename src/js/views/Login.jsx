@@ -1,5 +1,7 @@
 // 1. Import React, Hooks
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 // 5 Exportar y 2 Crear el componente
@@ -11,6 +13,7 @@ export const Login = () => {
   const [checkedMe, setCheckedMe] = useState(false);
   const [type, setType] = useState('1')
   const [viewPassword, setViewPassword] = useState(false)
+  const navigate = useNavigate();
 
 
   // 3.x - Definir las funciones de los onChange
@@ -53,9 +56,11 @@ export const Login = () => {
       accept: checkedMe
     }
     console.log(dataToSend)
-    // Redicccionar a otra pagina (Error, ingreso)
     // Fin de la  Lógica de lo que mi formulario realice.
     handleReset()
+    // Redicccionar a otra pagina (Error, ingreso)
+    // <Link to="/posts">Posts</Link>
+    navigate('/posts')
   }
 
 

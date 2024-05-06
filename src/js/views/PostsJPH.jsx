@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from "./Spinner";
+import { Spinner } from "../component/Spinner";
 
 
 export const PostsJPH = () => {

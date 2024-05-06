@@ -1,6 +1,6 @@
 // 1. Importamos react
 import React from "react";
-import { BtnReadMore } from "./BtnReadMore.jsx";
+import { BtnReadMore } from "../component/BtnReadMore.jsx";
 
 
 // 2. Creamos el comoponenete funcion
@@ -19,7 +19,7 @@ const Jumbotron = () => {
               This takes the basic jumbotron above and makes its background edge-to-edge with a <code>.container</code> inside to align content. Similar to above, it's been recreated with built-in grid and utility classes.
             </p>
             <p className={colorText}>Hola</p>
-            <BtnReadMore/>
+            <BtnReadMore />
           </div>
         </div>
       </div>

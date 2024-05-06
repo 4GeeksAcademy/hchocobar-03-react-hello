@@ -7,22 +7,23 @@ import logoReact from '../../img/logo-reactjs.png';
 import logoHector from '../../img/logo-hcht-uk.jpg';
 // Componentes
 import Navbar from "./Navbar.jsx";
-import Jumbotron from "./Jumbotron.jsx";
+import Jumbotron from "../views/Jumbotron.jsx";
 import { Spinner } from "./Spinner.jsx";
-import { Card } from "./Card.jsx";
+import { Card } from "../views/Card.jsx";
 import { Alert } from "./Alert.jsx";
 import { StateExample } from "./StateExample.jsx";
-import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
-import { TrafficLight } from "./TrafficLight.jsx";
-import { SimpleCounter } from "./SimpleCounter.jsx";
-import { Login } from "./Login.jsx";
-import { TodoList } from "./TodoList.jsx";
-import { UsersJPH } from "./UsersJPH.jsx";
-import { TodosJPH } from "./TodosJPH.jsx";
-import { AlbumsJPH } from "./AlbumsJPH.jsx";
-import { PostsJPH } from "./PostsJPH.jsx";
-import { TodoListWithFetch } from "./TodoListWithFetch.jsx";
-import { TodoList4Geeks } from "./TodoList4Geeks.jsx";
+import { SimpleCounterBonus } from "../views/SimpleCounterBonus.jsx";
+import { TrafficLight } from "../views/TrafficLight.jsx";
+import { SimpleCounter } from "../views/SimpleCounter.jsx";
+import { Login } from "../views/Login.jsx";
+import { TodoList } from "../views/TodoList.jsx";
+import { UsersJPH } from "../views/UsersJPH.jsx";
+import { TodosJPH } from "../views/TodosJPH.jsx";
+import { AlbumsJPH } from "../views/AlbumsJPH.jsx";
+import { PostsJPH } from "../views/PostsJPH.jsx";
+import { TodoListWithFetch } from "../views/TodoListWithFetch.jsx";
+import { TodoList4Geeks } from "../views/TodoList4Geeks.jsx";
+import { Layout } from "../Layout.jsx";
 
 
 // 2. Create ours component en PascalCase
@@ -33,14 +34,15 @@ const Home = () => {
 	// 4. Retornamos HTML -> un solo elemento HTML	
 	return (
 		<div className="text-center">
+			<Layout />
 			<Navbar />
 			<TodoList4Geeks />
-			{/* 
-			<TodoListWithFetch/>
-			<PostsJPH/>
-			<AlbumsJPH />
-			<TodosJPH />
 			<UsersJPH />
+			<TodoListWithFetch />
+			<PostsJPH />
+			<AlbumsJPH />
+			{/* 
+			<TodosJPH />
 			<Alert />
 			<TodoList />
 			<Login />
