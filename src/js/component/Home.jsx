@@ -1,26 +1,33 @@
+// 1. Importando React
 import React from "react";
+import rigoImage from "../../img/rigo-baby.jpg";  // Include images into your bundle
+import Navbar from "./Navbar.jsx";
+import { Footer } from "./Footer.jsx";
+import { Jumbotron } from "./Jumbotron.jsx";
+import { Alert } from "./Alert.jsx";
+import { Spinner } from "./Spinner.jsx";
+import { Card } from "./Card.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
+// 2. Create your first component - Nombre del componente es en PascalCase
 const Home = () => {
+	// 3. Código de JS
+
+	// 4. retornar un solo elemento HTML, (uno y solo uno)
 	return (
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<Navbar />
+			<Alert/>
+			{/* <Spinner/> */}
+			<Card/>
+			<h1 className="text-center mt-5">Hello React</h1>
+			<Jumbotron/>
+			{/* <p><img src={rigoImage} /></p> */}
+			<Footer/>
 		</div>
 	);
 };
 
+
+// 5. Exporto la función (para poder importarla en otro compenente)
 export default Home;
