@@ -1,6 +1,10 @@
 // 1. Importando React
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";  // Include images into your bundle
+// Include images into your bundle
+import rigoImage from "../../img/rigo-baby.jpg";
+import logoReact from "../../img/logo-reactjs.png";
+import logoPython from '../../img/logo-python.png';
+// Custom Components
 import Navbar from "./Navbar.jsx";
 import { Footer } from "./Footer.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
@@ -17,11 +21,26 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar />
-			<Alert/>
-			{/* <Spinner/> */}
-			<Card/>
 			<h1 className="text-center mt-5">Hello React</h1>
-			<Jumbotron/>
+			<div className="container">
+				<div className="row">
+					<div className="col-4">
+						<Card title={'Hector'}/>
+						<Card title={'React JS'} 
+									description={'React es una librería de JS orientada al FrontEnd'} 
+									textButton={'Leer mas ...'}
+									image={logoReact}/>
+						<Card title='Python'
+									description={'Lenguaje de Programación más popular'}
+									textButton={'Documentación'}
+									image={logoPython}/>
+
+					</div>
+				</div>
+			</div>
+			{/* <Alert/> */}
+			{/* <Spinner/> */}
+			{/* <Jumbotron/> */}
 			{/* <p><img src={rigoImage} /></p> */}
 			<Footer/>
 		</div>
