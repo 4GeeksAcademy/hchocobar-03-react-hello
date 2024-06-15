@@ -11,6 +11,8 @@ import { Jumbotron } from "./Jumbotron.jsx";
 import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { Card } from "./Card.jsx";
+import { ExampleUseState } from "./ExampleUseState.jsx";
+import { TrafficLight } from "./TrafficLight.jsx";
 
 
 // 2. Create your first component - Nombre del componente es en PascalCase
@@ -20,8 +22,11 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML, (uno y solo uno)
 	return (
 		<div className="text-center">
-			<Navbar />
-			<h1 className="text-center mt-5">Hello React</h1>
+			{/* <Navbar /> */}
+			{/* <h1 className="text-center mt-5">Hooks: useState()</h1> */}
+			<TrafficLight/>
+			{/* <ExampleUseState/> */}
+			{/* 
 			<div className="container">
 				<div className="row">
 					<div className="col-4">
@@ -38,11 +43,12 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			*/}
 			{/* <Alert/> */}
 			{/* <Spinner/> */}
 			{/* <Jumbotron/> */}
 			{/* <p><img src={rigoImage} /></p> */}
-			<Footer/>
+			{/* <Footer/> */}
 		</div>
 	);
 };
