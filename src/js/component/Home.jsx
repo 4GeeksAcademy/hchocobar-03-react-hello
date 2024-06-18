@@ -13,6 +13,7 @@ import { Spinner } from "./Spinner.jsx";
 import { Card } from "./Card.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { TrafficLight } from "./TrafficLight.jsx";
+import { SimpleCounter } from "./SimpleCounter.jsx";
 
 
 // 2. Create your first component - Nombre del componente es en PascalCase
@@ -22,9 +23,10 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML, (uno y solo uno)
 	return (
 		<div className="text-center">
-			{/* <Navbar /> */}
+			<Navbar />
 			{/* <h1 className="text-center mt-5">Hooks: useState()</h1> */}
-			<TrafficLight/>
+			<SimpleCounter />
+			{/* <TrafficLight/> */}
 			{/* <ExampleUseState/> */}
 			{/* 
 			<div className="container">
