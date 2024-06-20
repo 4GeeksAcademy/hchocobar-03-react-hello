@@ -14,6 +14,7 @@ import { Card } from "./Card.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { TrafficLight } from "./TrafficLight.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
+import { Login } from "./Login.jsx";
 
 
 // 2. Create your first component - Nombre del componente es en PascalCase
@@ -25,7 +26,8 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar />
 			{/* <h1 className="text-center mt-5">Hooks: useState()</h1> */}
-			<SimpleCounter />
+			<Login/>
+			{/* <SimpleCounter /> */}
 			{/* <TrafficLight/> */}
 			{/* <ExampleUseState/> */}
 			{/* 
