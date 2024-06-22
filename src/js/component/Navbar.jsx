@@ -5,7 +5,6 @@ import { BtnCallActions } from "./BtnCallActions";
 // 2. Crear el componente (funcion)
 const Navbar = () => {
   // 3. Code JS
-  console.log('Mi navbar para React');
   let cohorte = 'Spain 72'
 
   // 4. Retornar un elemento HTML
