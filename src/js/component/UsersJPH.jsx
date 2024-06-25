@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Spinner } from "./Spinner.jsx";
 
 
@@ -32,17 +32,24 @@ export const UserJPH = () => {
     return data
   }
 
+  /* 
   const handleOnClick = () => {
     getUsers();
   }
+  */
+
+  useEffect(() => {
+    getUsers()
+  }, [])
 
   return (
     <div className="container">
       <h2 className="text">Users JPH</h2>
-
+      {/* 
       <button onClick={handleOnClick} className={`btn btn-success `} type="button">
         Get Users
       </button>
+      */}
       <div className="container">
         {!users ? <Spinner />
           :
