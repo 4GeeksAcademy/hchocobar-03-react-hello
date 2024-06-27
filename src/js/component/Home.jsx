@@ -17,6 +17,7 @@ import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { TodoList } from "./TodoList.jsx";
 import { UserJPH } from "./UsersJPH.jsx";
+import { TodoListWithFetch } from "./TodoListWithFetch.jsx";
 
 // 2. Create your first component - Nombre del componente es en PascalCase
 const Home = () => {
@@ -25,9 +26,10 @@ const Home = () => {
 	// 4. retornar un solo elemento HTML, (uno y solo uno)
 	return (
 		<div className="text-center">
-			<Navbar />
+			{/* <Navbar /> */}
 			{/* <h1 className="text-center mt-5">Hooks: useState()</h1> */}
-			<UserJPH />
+			{/* <UserJPH /> */}
+			<TodoListWithFetch/>
 			{/* <TodoList /> */}
 			{/* <Login/> */}
 			{/* <SimpleCounter /> */}
