@@ -9,15 +9,15 @@ export const Footer = () => {
 
   // 4.
   return (
-    <>
+    <div className="mt-auto text-center">
       <a href="#" className="btn btn-success">
         If you see this green button... bootstrap is working...
       </a>
       <p>
         Made by{" "}
-        <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
+        <a href="http://www.4geeksacademy.com" target="_blank">4Geeks Academy</a>, with
         love! for {cohorte}
       </p>
-    </>
+    </div>
   )
 }

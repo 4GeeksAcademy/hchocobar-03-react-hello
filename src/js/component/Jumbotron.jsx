@@ -1,6 +1,8 @@
 // 1. 
 import React from "react";
 import { BtnCallActions } from "./BtnCallActions.jsx";
+import { BtnCallActionsSecondary } from "./BtnCallActionSecondary.jsx";
+import { Card } from "./Card.jsx";
 
 
 // 5 y 2
@@ -14,6 +16,8 @@ export const Jumbotron = () => {
         <h1 className="display-5 fw-bold">Custom jumbotron</h1>
         <p className=" fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
         <BtnCallActions/>
+        <BtnCallActionsSecondary/>
+        <Card/>
       </div>
     </div>
   )
