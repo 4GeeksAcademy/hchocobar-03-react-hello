@@ -8,7 +8,7 @@ export const BtnCallAction = () => {
   
   return (
     <>
-      <button onClick={myAlert} type="button" class="btn btn-warning">
+      <button onClick={myAlert} type="button" className="btn btn-warning">
         Warning
       </button>
     </>
