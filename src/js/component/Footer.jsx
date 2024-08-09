@@ -9,7 +9,6 @@ export const Footer = () => {
   // 4
   return (
     <div className="container mt-4">
-      <BtnCallAction/>
       <p>
 				Made by{" "}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with

@@ -11,6 +11,7 @@ import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { BtnCallAction } from "./BtnCallAction.jsx";
 import { Title } from "./Title.jsx";
+import { ExampleUseState } from "./ExampleUseState.jsx";
 
 
 // Create your first component
@@ -18,9 +19,11 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
-			<Title color='danger' text='Alejandro'/>
-			<Alert/>
-			<Spinner/>
+			<Title color='danger' text='Hook: useState()'/>
+			<ExampleUseState/>
+			{/* <Alert/> */}
+			{/* <Spinner/> */}
+			{/* 
 			<div className="container">
 				<div className="row row-cols-4">
 					<Card/>
@@ -30,7 +33,8 @@ const Home = () => {
 					<Card logo={logoReact} title='React' description='React is a free and open-source front-end JavaScript library for building user interfaces based on components by Facebook Inc.'/>
 				</div>
 			</div>
-			<Jumbotrom/>
+		  */}
+			{/* <Jumbotrom/> */}
 			<Footer/>
 		</div>
 	);
