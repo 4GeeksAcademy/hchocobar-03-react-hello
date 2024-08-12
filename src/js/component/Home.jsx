@@ -12,6 +12,7 @@ import { Spinner } from "./Spinner.jsx";
 import { BtnCallAction } from "./BtnCallAction.jsx";
 import { Title } from "./Title.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
+import { TrafficLight } from './TrafficLight.jsx';
 
 
 // Create your first component
@@ -20,7 +21,8 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar/>
 			<Title color='danger' text='Hook: useState()'/>
-			<ExampleUseState/>
+			<TrafficLight/>
+			{/* <ExampleUseState/> */}
 			{/* <Alert/> */}
 			{/* <Spinner/> */}
 			{/* 

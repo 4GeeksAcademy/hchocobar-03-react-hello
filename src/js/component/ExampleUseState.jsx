@@ -1,5 +1,9 @@
 import React, { useState } from "react";  // 1 Importar React y Hoocks
 
+// Reglas:
+// 1.- Nunca cambiar el valor de un estado utilizando el operador de asignación (=) de JS
+// 2.- El estado vive dentro dentro del componente (no puedo acceder al estado fuera del componente)
+
 
 // 5 y 2
 export const ExampleUseState = () => {
