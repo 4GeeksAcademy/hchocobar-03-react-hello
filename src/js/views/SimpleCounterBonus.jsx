@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 export const SimpleCounterBonus = () => {
 	const [counter, setCounter] = useState(0);
 	const [isRunning, setIsRunning] = useState(false);
+    const [countUp, setCountUp] = useState(true);
     const [status, setStatus] = useState({icon: "fas fa-clock", 
                                           title: "Clock", 
                                           titleStyle:"text-center text-success"});
-	const [countUp, setCountUp] = useState(true);
 
     const handleStart = () => {
         setIsRunning(!isRunning);
@@ -25,10 +25,10 @@ export const SimpleCounterBonus = () => {
 	const handleReset = () => {
 		setCounter(0);
 		setIsRunning(false);
+        setCountUp(true);
         setStatus({icon:"fas fa-clock", 
                    title:"Clock", 
                    titleStyle:"text-center text-success"});
-        setCountUp(true);
 	};
 
     const handleTimer = (event) => {
@@ -38,10 +38,10 @@ export const SimpleCounterBonus = () => {
             !isNaN(event.target.value)) 
         {
             setCounter(parseInt(event.target.value));
+            setCountUp(false);
             setStatus({icon: "fas fa-history", 
                        title:"Timer", 
                        titleStyle:"text-center text-danger"});
-            setCountUp(false);
         } else {
             setCounter(0);
             event.target.value = "";
