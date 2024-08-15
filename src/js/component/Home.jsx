@@ -15,6 +15,7 @@ import { ExampleUseState } from "./ExampleUseState.jsx";
 import { TrafficLight } from './TrafficLight.jsx';
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
+import { FormLogin } from "./FormLogin.jsx";
 
 
 // Create your first component
@@ -23,7 +24,8 @@ const Home = () => {
 		<div className="text-center">
 			{/* <Navbar/> */}
 			<Title color='danger' text='Entradas controladas'/>
-			<Login/>
+			<FormLogin/>
+			{/* <Login/> */}
 			{/* <SimpleCounter/> */}
 			{/* <TrafficLight/> */}
 			{/* <ExampleUseState/> */}
