@@ -13,15 +13,19 @@ import { BtnCallAction } from "./BtnCallAction.jsx";
 import { Title } from "./Title.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { TrafficLight } from './TrafficLight.jsx';
+import { SimpleCounter } from "./SimpleCounter.jsx";
+import { Login } from "./Login.jsx";
 
 
 // Create your first component
 const Home = () => {
 	return (
 		<div className="text-center">
-			<Navbar/>
-			<Title color='danger' text='Hook: useState()'/>
-			<TrafficLight/>
+			{/* <Navbar/> */}
+			<Title color='danger' text='Entradas controladas'/>
+			<Login/>
+			{/* <SimpleCounter/> */}
+			{/* <TrafficLight/> */}
 			{/* <ExampleUseState/> */}
 			{/* <Alert/> */}
 			{/* <Spinner/> */}
@@ -37,7 +41,7 @@ const Home = () => {
 			</div>
 		  */}
 			{/* <Jumbotrom/> */}
-			<Footer/>
+			{/* <Footer/> */}
 		</div>
 	);
 };
