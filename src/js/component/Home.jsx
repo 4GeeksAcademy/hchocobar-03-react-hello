@@ -16,6 +16,7 @@ import { TrafficLight } from './TrafficLight.jsx';
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { FormLogin } from "./FormLogin.jsx";
+import { TodoList } from "./TodoList.jsx";
 
 
 // Create your first component
@@ -23,8 +24,9 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			{/* <Navbar/> */}
-			<Title color='danger' text='Entradas controladas'/>
-			<FormLogin/>
+			<Title color='success' text='Todo List'/>
+			<TodoList/>
+			{/* <FormLogin/> */}
 			{/* <Login/> */}
 			{/* <SimpleCounter/> */}
 			{/* <TrafficLight/> */}

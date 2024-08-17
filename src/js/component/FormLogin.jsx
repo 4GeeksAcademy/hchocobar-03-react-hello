@@ -25,7 +25,7 @@ export const FormLogin = () => {
       <div className="row d-flex justify-content-center">
         <div className="col-10 col-md-8 col-lg-5 border rounded-3">
           <div className="d-flex justify-content-end pt-2">
-              <button type="button" class="btn-close" aria-label="Close"></button>
+              <button type="button" className="btn-close" aria-label="Close"></button>
           </div>
           <h1 className="text-primary">Login</h1>
           <form onSubmit={handleSubmit} className="py-4 px-2 p-sm-4  p-md-5">
