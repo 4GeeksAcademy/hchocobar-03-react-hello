@@ -1,26 +1,33 @@
 import React from "react";  // 1. Importando React
 import rigoImage from "../../img/rigo-baby.jpg";  // Include images into your bundle
+import logoReact from "../../img/logo-reactjs.png"
+import logoPython from "../../img/logo-python.png"
+import logo4Geeks from "../../img/logo-4geeks.png"
 import Navbar from "./Navbar.jsx";
 import { Footer } from "./Footer.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { Card } from "./Card.jsx";
+import { Title } from "./Title.jsx";
 
 
 // 2. Create your component con sintaxis PascalCase (siempre la primera letra en mayúsculas)
 const Home = () => {
 	// 3. Código de JS
+	// let cohorte = 'Spain-77'
 
 	// 4. Retornanmos un solo elemento HTML
 	return (
 		<div className="text-center">
 			<Navbar/>
 			<Alert />
-			{/* <Spinner/> */}
+			<Title text='React'/>
 			<Card/>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<Jumbotron/>
+			<Card title={'Python'} imageURL={logoPython}/>
+			<Card title='React' imageURL={logoReact}/>
+			{/* <Spinner/> */}
+			{/* <Jumbotron/> */}
 			{/*<img src={rigoImage} />*/}
 			
 			{/* 
