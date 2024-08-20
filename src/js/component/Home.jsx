@@ -17,6 +17,7 @@ import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { FormLogin } from "./FormLogin.jsx";
 import { TodoList } from "./TodoList.jsx";
+import { UsersJPH } from "./UsersJPH.jsx";
 
 
 // Create your first component
@@ -24,8 +25,9 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			{/* <Navbar/> */}
-			<Title color='success' text='Todo List'/>
-			<TodoList/>
+			<Title color='success' text='Users JPH'/>
+			<UsersJPH/>
+			{/* <TodoList/> */}
 			{/* <FormLogin/> */}
 			{/* <Login/> */}
 			{/* <SimpleCounter/> */}
