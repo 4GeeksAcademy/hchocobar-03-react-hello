@@ -7,7 +7,7 @@ export const Title = (props) => {
   
   // 4
   return (
-    <h1 className={`text-center mt-5 text-${props.color}`}>{props.text}</h1>
+    <h1 className={`text-center mt-2 text-${props.color}`}>{props.text}</h1>
   )
 
 }
