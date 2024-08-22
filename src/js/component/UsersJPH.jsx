@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "./Spinner.jsx";
 
 
 export const UsersJPH = () => {
   const host = 'https://jsonplaceholder.typicode.com';
-  const [ users, setUsers ] = useState([])
+  const [ users, setUsers ] = useState()
 
 
   // Función que buscará los datos de la API
@@ -31,6 +32,8 @@ export const UsersJPH = () => {
     // Ya obtuve los datos de la API
     console.log(data);
     // 6. Ahora comienza mi lógica
+    // users = data;
+    setUsers(data);
   }
 
   useEffect(() => {
@@ -42,22 +45,26 @@ export const UsersJPH = () => {
     <div>
       <div className="row row-cols-1 row cols-md-3">
         <div className="col">
-          <div className="card">
-            <img src="..." className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">An item</li>
-                <li className="list-group-item">A second item</li>
-                <li className="list-group-item">A third item</li>
-              </ul>
-              <div className="card-body">
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-          </div>
+          { !users ? 
+            <Spinner/> 
+          : users.map((item) => 
+            <div className="card">
+              <img src={`https://randomuser.me/api/portraits/women/${item.id + 10}.jpg`} className="card-img-top" alt="..."/>
+                <div className="card-body">
+                  <h5 className="card-title">{item.name}</h5>
+                  <p className="card-text">{item.website}</p>
+                </div>
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">{item.email}</li>
+                  <li className="list-group-item">{item.phone}</li>
+                  <li className="list-group-item">{item.address.street} {item.address.suite}, {item.address.city}</li>
+                </ul>
+                <div className="card-body">
+                  <a href="#" className="card-link">Card link</a>
+                  <a href="#" className="card-link">Another link</a>
+                </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

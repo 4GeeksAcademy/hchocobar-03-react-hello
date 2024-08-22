@@ -18,6 +18,8 @@ import { Login } from "./Login.jsx";
 import { FormLogin } from "./FormLogin.jsx";
 import { TodoList } from "./TodoList.jsx";
 import { UsersJPH } from "./UsersJPH.jsx";
+import { TodosJPH } from "./TodosJPH.jsx";
+import { Characters } from "./Characters.jsx";
 
 
 // Create your first component
@@ -26,6 +28,8 @@ const Home = () => {
 		<div className="text-center">
 			{/* <Navbar/> */}
 			<Title color='success' text='Users JPH'/>
+			<Characters/>
+			{/* <TodosJPH/> */}
 			<UsersJPH/>
 			{/* <TodoList/> */}
 			{/* <FormLogin/> */}
