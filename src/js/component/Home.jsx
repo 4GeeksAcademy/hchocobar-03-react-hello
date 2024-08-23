@@ -11,6 +11,7 @@ import { Spinner } from "./Spinner.jsx";
 import { Card } from "./Card.jsx";
 import { Title } from "./Title.jsx";
 import { StateExample } from "./StateExample.jsx";
+import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 
 
 // 2. Create your component con sintaxis PascalCase (siempre la primera letra en mayúsculas)
@@ -22,9 +23,10 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
+			<SimpleCounterBonus/>
+			{/* 
 			<Title text='Hooks - useState' color='success'/>
 			<StateExample/>
-			{/* 
 			<Alert />
 			<Card/>
 			<Card title={'Python'} imageURL={logoPython}/>
