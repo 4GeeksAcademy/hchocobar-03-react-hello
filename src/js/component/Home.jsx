@@ -12,6 +12,7 @@ import { Card } from "./Card.jsx";
 import { Title } from "./Title.jsx";
 import { StateExample } from "./StateExample.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
+import { ExampleInputControler } from "./ExampleInputControler.jsx";
 
 
 // 2. Create your component con sintaxis PascalCase (siempre la primera letra en mayúsculas)
@@ -23,8 +24,9 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
-			<SimpleCounterBonus/>
+			<ExampleInputControler/>
 			{/* 
+			<SimpleCounterBonus/>
 			<Title text='Hooks - useState' color='success'/>
 			<StateExample/>
 			<Alert />
