@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export const CrudExample = () => {
   const host = 'https://3000-hchocobar-chocobarnetba-4wsir07tmvx.ws-us115.gitpod.io';
-  const [ publications, setPublications ] = useState([])
+  const [publications, setPublications] = useState([])
 
   // Consumir los datos de una API: JsonPlaccHolder/users
   // 0 Defino una función asincrona, método GET de all
@@ -133,18 +133,18 @@ export const CrudExample = () => {
         Nueva Publicación
       </button>
       <ul className="list-group">
-        {publications.map((item) => 
-         <li key={item.id} className="list-group-item hidden-icon d-flex justify-content-between">
-         {item.title_es}
-         <div>
-          <span onClick={() => editPublications(item)}>
-              <i className="fas fa-pencil-alt text-primary"></i>
-          </span>
-          <span onClick={() => deletePublications(item.id)}>
-              <i className="fas fa-trash text-danger ms-2"></i>
-          </span>
-         </div>
-         </li> 
+        {publications.map((item) =>
+          <li key={item.id} className="list-group-item hidden-icon d-flex justify-content-between">
+            {item.title_es}
+            <div>
+              <span onClick={() => editPublications(item)}>
+                <i className="fas fa-pencil-alt text-primary"></i>
+              </span>
+              <span onClick={() => deletePublications(item.id)}>
+                <i className="fas fa-trash text-danger ms-2"></i>
+              </span>
+            </div>
+          </li>
         )}
       </ul>
     </div>

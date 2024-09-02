@@ -13,7 +13,8 @@ export const Footer = () => {
       <hr/>
       <p>
         Made by{" "}
-        <a href="http://www.4geeksacademy.com">4Geeks Academy</a> & <a href="https://chocobar.net" target="_blanc">Héctor</a> , with
+        <a href="http://www.4geeksacademy.com" target="_blank">4Geeks Academy</a> & 
+        <a href="https://chocobar.net" target="_blank">Héctor</a> , with
         love for {cohorte}
       </p>
     </>
