@@ -15,6 +15,7 @@ import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
 import { ExampleInputControler } from "./ExampleInputControler.jsx";
 import { FetchExample } from "./FetchExample.jsx";
 import { CrudExample } from "./CrudExample.jsx";
+import { AddEditForm } from "./AddEditForm.jsx";
 
 
 // 2. Create your component con sintaxis PascalCase (siempre la primera letra en mayúsculas)
@@ -26,20 +27,21 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
+			<AddEditForm/>
+			<Title text='Hooks - useState' color='success'/>
+			<Alert />
 			<CrudExample/>
-			{/* 
 			<FetchExample/>
 			<ExampleInputControler/>
 			<SimpleCounterBonus/>
-			<Title text='Hooks - useState' color='success'/>
 			<StateExample/>
-			<Alert />
 			<Card/>
 			<Card title={'Python'} imageURL={logoPython}/>
 			<Card title='React' imageURL={logoReact}/>
+			<Jumbotron/>
+			{/* 
 			<Spinner/> 
 			*/}
-			{/* <Jumbotron/> */}
 			{/*<img src={rigoImage} />*/}
 			
 			{/* 
