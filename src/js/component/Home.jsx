@@ -1,52 +1,26 @@
-import React from "react";   // 1. Importamos React
-import rigoImage from "../../img/rigo-baby.jpg";  // Include images into your bundle
-import Navbar from './Navbar.jsx';  // 6 Importo mi componente
-import { Footer } from "./Footer.jsx";  // 6
-import { BtnCallActions } from "./BtnCallAction.jsx";
-import { Alert } from './Alert.jsx';
-import { Card } from "./Card.jsx";
-import { Jumbotron } from "./Jumbotron.jsx";
-import { Title } from "./Title.jsx";
+import React from "react";
 
+//include images into your bundle
+import rigoImage from "../../img/rigo-baby.jpg";
 
-// 2. Create your  component
+//create your first component
 const Home = () => {
-	// 3.-Código JS
-
-	// 4. Retorno un solo elemento HTML
 	return (
 		<div className="text-center">
-			<Navbar/>
-			<Alert/>
-			<Title text='React Intro' color='primary' align='center' number='II'/>
-			<Card 
-				title='Susan Robinson' 
-				email='susan.robinson@example.com'
-				imageURL={'https://randomuser.me/api/portraits/women/1.jpg'}
-				imageAlt={'Photo Susan Robinson'}
-			/>
-			<Card/>
-			<Card 
-				title='Larry Caldwell' 
-				email='larry.caldwell@example.com'
-				imageURL={'https://randomuser.me/api/portraits/men/71.jpg'}
-				imageAlt={'Photo Larry Caldwell'}
-			/>
-			<Title text='Card List' align='center'/>
-			<Title text='Props Types' color='success'/>
-			<Title/>
-			{/* 
-			<Jumbotron/>
 			<h1 className="text-center mt-5">Hello Rigo!</h1>
 			<p>
 				<img src={rigoImage} />
 			</p>
-			<BtnCallActions/>
-			<Footer/> 
-			*/}
+			<a href="#" className="btn btn-success">
+				If you see this green button... bootstrap is working...
+			</a>
+			<p>
+				Made by{" "}
+				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
+				love!
+			</p>
 		</div>
 	);
 };
 
-// 5. Exporto mi componente
 export default Home;
