@@ -9,7 +9,7 @@ export const Title = (props) => {
   // 4 Retornamos un solo elemento HTML
   return (
     <h1 className={`text-${props.align} text-${props.color}`}>
-      {props.text} - Clase: {props.number}
+      {props.text} {props.number}
     </h1>
   )
 }
@@ -24,8 +24,8 @@ Title.propTypes = {
 Title.defaultProps = {
   text: 'Custom Title',
   color: "danger",
-  align: 'end',
-  number: '!?'
+  align: 'center',
+  number: ''
 }
 
 // 7 y 6 

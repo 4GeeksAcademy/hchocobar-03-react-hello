@@ -7,6 +7,7 @@ import { Alert } from './Alert.jsx';
 import { Card } from "./Card.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { Title } from "./Title.jsx";
+import { ExampleUseState } from "./ExampleUseState.jsx";
 
 
 // 2. Create your  component
@@ -18,11 +19,13 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar/>
 			<Alert/>
-			<Title text='React Intro' color='primary' align='center' number='II'/>
+			<Title text='Hooks - useState()' color='success'/>
+			<ExampleUseState/>
+			{/* 
 			<Card 
 				title='Susan Robinson' 
 				email='susan.robinson@example.com'
-				imageURL={'https://randomuser.me/api/portraits/women/1.jpg'}
+				imageURL={'https://randomuser.me/api/portraits/women/10.jpg'}
 				imageAlt={'Photo Susan Robinson'}
 			/>
 			<Card/>
@@ -35,7 +38,6 @@ const Home = () => {
 			<Title text='Card List' align='center'/>
 			<Title text='Props Types' color='success'/>
 			<Title/>
-			{/* 
 			<Jumbotron/>
 			<h1 className="text-center mt-5">Hello Rigo!</h1>
 			<p>

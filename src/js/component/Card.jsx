@@ -10,7 +10,7 @@ export const Card = (props) => {
 
   // 4
   return (
-    <div className="card" style={{width: "24rem"}}>
+    <div className="card" style={{width: "16rem"}}>
       <img src={props.imageURL} className="card-img-top" alt={props.imageAlt}/>
         <div className="card-body">
           <h2 className="card-title">{props.title}</h2>
