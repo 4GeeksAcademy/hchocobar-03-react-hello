@@ -8,6 +8,7 @@ import { Card } from "./Card.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { Title } from "./Title.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
+import { SimpleCounter } from "./SimpleCounter.jsx";
 
 
 // 2. Create your  component
@@ -20,8 +21,9 @@ const Home = () => {
 			<Navbar/>
 			<Alert/>
 			<Title text='Hooks - useState()' color='success'/>
-			<ExampleUseState/>
+			<SimpleCounter/>
 			{/* 
+			<ExampleUseState/>
 			<Card 
 				title='Susan Robinson' 
 				email='susan.robinson@example.com'
