@@ -10,6 +10,7 @@ import { Title } from "./Title.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
+import { Login } from "./Login.jsx";
 
 
 // 2. Create your  component
@@ -22,8 +23,9 @@ const Home = () => {
 			<Navbar/>
 			<Alert/>
 			{/* <Title text='Hooks - useState()' color='success'/> */}
-			<SimpleCounterBonus/>
+			<Login/>
 			{/* 
+			<SimpleCounterBonus/>
 			<SimpleCounter/>
 			<ExampleUseState/>
 			<Card 
