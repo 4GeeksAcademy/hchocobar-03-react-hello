@@ -9,6 +9,8 @@ import { Jumbotron } from "./Jumbotron.jsx";
 import { Title } from "./Title.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
+import { SimpleCounterBonus } from "./SimpleCounterBonus.jsx";
+import { Login } from "./Login.jsx";
 
 
 // 2. Create your  component
@@ -20,9 +22,11 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar/>
 			<Alert/>
-			<Title text='Hooks - useState()' color='success'/>
-			<SimpleCounter/>
+			{/* <Title text='Hooks - useState()' color='success'/> */}
+			<Login/>
 			{/* 
+			<SimpleCounterBonus/>
+			<SimpleCounter/>
 			<ExampleUseState/>
 			<Card 
 				title='Susan Robinson' 
