@@ -24,9 +24,9 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar/>
 			{/* <Title text='Hooks - useState()' color='success'/> */}
-			<TrafficLight/>
-			{/* 
 			<TodoList/>
+			{/* 
+			<TrafficLight/>
 			<Alert/>
 			<Login/>
 			<SimpleCounterBonus/>
