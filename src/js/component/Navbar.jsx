@@ -5,7 +5,7 @@ import { BtnCallActions } from "./BtnCallAction.jsx";
 // 2 Creamos nuestro componente
 const Navbar = () => {
   // 3 Codigo JS
-  const cohorte = 'Spain 93'
+  const cohorte = 'Spain 91'
 
   // 4 Retornamos un solo elemento HTML
   return (
