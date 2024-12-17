@@ -15,6 +15,7 @@ import { TrafficLight } from "./TrafficLight.jsx";
 import { TodoList } from "./TodoList.jsx";
 import { ExampleFetch } from "./ExampleFetch.jsx";
 import { ExampleFetchComplex } from "./ExampleFetchComplex.jsx";
+import { TodoListFetch } from "./TodoListFetch.jsx";
 
 
 // 2. Create your  component
@@ -26,10 +27,11 @@ const Home = () => {
 		<div className="text-center">
 			<Navbar/>
 			{/* <Title text='Hooks - useState()' color='success'/> */}
-			<ExampleFetchComplex/>
+			<TodoListFetch/>
 			{/* 
-			<ExampleFetch/>
 			<TodoList/>
+			<ExampleFetchComplex/>
+			<ExampleFetch/>
 			<TrafficLight/>
 			<Alert/>
 			<Login/>
