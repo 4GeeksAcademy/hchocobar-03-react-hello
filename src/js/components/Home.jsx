@@ -6,6 +6,9 @@ import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import { BtnCallActions } from "./BtnCallActions.jsx";
 import { Card } from "./Card.jsx";
+import { Footer } from "./Footer.jsx";
+import { SubTitle } from "./SubTitle.jsx";
+import { TemplateLiteralvsJSX } from "./TemplateLiteralvsJSX.jsx";
 
 
 // Create your first component
@@ -14,16 +17,24 @@ const Home = () => {
 	console.log('estoy dentro del componente Home')
 
 	return (
-		<div className="text-center">
+		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
 			<Alert/>
 			<Spinner/>
-			<h1 className="text-center mt-5 text-info">Intro to React</h1>
-			<Card/>
+			<h1 className="text-center mt-2 text-info">Intro to React</h1>
+
+			<SubTitle text="Class 2" color="success"/>
+			<SubTitle text="otro Subtitulo" color="danger"/>
+
+			<Card title='Irene'/>
+			<Card title='Amanda' id='5'/>
+			<Card title='Valentina' id='25' description={'Full Stack Developer'} />
+
 			<BtnCallActions/>
-			<p>
-				Made by {10 * 5} <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with				love!
-			</p>
+
+			<TemplateLiteralvsJSX/>
+
+			<Footer/>
 		</div>
 	);
 };
