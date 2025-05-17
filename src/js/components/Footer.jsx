@@ -6,10 +6,11 @@ export const Footer = () => {
 
   // 4 Retornamos 1 HTML
   return (
-    <div className="container mt-auto">
+    <div className="mt-auto">
       <hr />
-      <p>
-        Made by  <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, Héctor y Alvaro para la cohorte {100 + 8}
+      <p className="alert alert-secondary mb-0">
+        Made with ❤️ by <a href="http://www.4geeksacademy.com">4Geeks Academy</a>
+        , Héctor y Álvaro para la cohorte Spain-{100 + 8}
       </p>
     </div>
   )

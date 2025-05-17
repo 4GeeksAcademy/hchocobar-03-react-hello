@@ -19,9 +19,10 @@ const Home = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
+			<h1 className="text-center mt-2 text-info">Intro to React</h1>
+
 			<Alert/>
 			<Spinner/>
-			<h1 className="text-center mt-2 text-info">Intro to React</h1>
 
 			<SubTitle text="Class 2" color="success"/>
 			<SubTitle text="otro Subtitulo" color="danger"/>
