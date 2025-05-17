@@ -9,19 +9,22 @@ import { Card } from "./Card.jsx";
 import { Footer } from "./Footer.jsx";
 import { SubTitle } from "./SubTitle.jsx";
 import { TemplateLiteralvsJSX } from "./TemplateLiteralvsJSX.jsx";
+import { ExampleUseState } from "./ExampleUseState.jsx";
 
 
 // Create your first component
 const Home = () => {
 	// codigo JS
-	console.log('estoy dentro del componente Home')
+	// console.log('estoy dentro del componente Home')
 
 	return (
 		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
+			<h1 className="text-center mt-2 text-info">Hooks</h1>
+			<ExampleUseState />
+      {/* 
 			<Alert/>
 			<Spinner/>
-			<h1 className="text-center mt-2 text-info">Intro to React</h1>
 
 			<SubTitle text="Class 2" color="success"/>
 			<SubTitle text="otro Subtitulo" color="danger"/>
@@ -33,7 +36,7 @@ const Home = () => {
 			<BtnCallActions/>
 
 			<TemplateLiteralvsJSX/>
-
+      */}
 			<Footer/>
 		</div>
 	);
