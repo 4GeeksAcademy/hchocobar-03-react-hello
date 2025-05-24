@@ -12,6 +12,7 @@ import { TemplateLiteralvsJSX } from "./TemplateLiteralvsJSX.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
+import { TodoList } from "./TodoList.jsx";
 
 
 // Create your first component
@@ -22,8 +23,9 @@ const Home = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
-			<Login/>
+			<TodoList/>
       {/* 
+			<Login/>
 			<SimpleCounter/>
 			<h1 className="text-center mt-2 text-success">useState() y useEffect()</h1>
 			<ExampleUseState />
