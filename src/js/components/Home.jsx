@@ -14,6 +14,7 @@ import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { TodoList } from "./TodoList.jsx";
 import { ExampleFetch } from "./ExampleFetch.jsx";
+import { TodoListFetch } from "./TodoListFetch.jsx";
 
 
 // Create your first component
@@ -24,8 +25,9 @@ const Home = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
-			<ExampleFetch/>
+			<TodoListFetch/>
       {/* 
+			<ExampleFetch/>
 			<TodoList/>
 			<Login/>
 			<SimpleCounter/>
