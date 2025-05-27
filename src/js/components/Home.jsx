@@ -13,6 +13,8 @@ import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { TodoList } from "./TodoList.jsx";
+import { ExampleFetch } from "./ExampleFetch.jsx";
+import { TodoListFetch } from "./TodoListFetch.jsx";
 
 
 // Create your first component
@@ -23,8 +25,10 @@ const Home = () => {
 	return (
 		<div className="d-flex flex-column min-vh-100 text-center">
 			<Navbar/>
-			<TodoList/>
+			<TodoListFetch/>
       {/* 
+			<ExampleFetch/>
+			<TodoList/>
 			<Login/>
 			<SimpleCounter/>
 			<h1 className="text-center mt-2 text-success">useState() y useEffect()</h1>
