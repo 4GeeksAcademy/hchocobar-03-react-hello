@@ -23,6 +23,11 @@ export const ExampleFetch = () => {
     try {
       // 5. Realizo solicud y asignagno a una variable: response
       const response = await fetch(uri, options);
+      // 5.1 Valido la status_code del response, si hay error, trato el error
+      if (!response.ok) {
+        console.log('Error', response.status)
+        return
+      }
       // 6. Tomo los datos 'json' que devuelve la solicitud (esto demora)
       const data = await response.json();
       // console.log(data);
@@ -40,8 +45,13 @@ export const ExampleFetch = () => {
     const options = {
       method: 'GET'
     }
-    const response = await fetch(uri, options);
     try {
+      const response = await fetch(uri, options);
+      // 5.1 Valido la status_code del response, si hay error, trato el error
+      if (!response.ok) {
+        console.log('Error', response.status)
+        return
+      }
       const data = await response.json();
       setTodos(data);
     } catch {
@@ -54,6 +64,11 @@ export const ExampleFetch = () => {
     // voy a omitir options, xq solo hago un 'GET'
     try {
       const response = await fetch(uri);
+      // 5.1 Valido la status_code del response, si hay error, trato el error
+      if (!response.ok) {
+        console.log('Error', response.status)
+        return
+      }
       const data = await response.json();
       console.log(data.results);
       setPlanets(data.results)
