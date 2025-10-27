@@ -1,28 +1,39 @@
-import React from "react";
+import React from "react";  // 0.- Import React
+import rigoImage from "../../img/rigo-baby.jpg";  //include images into your bundle
+import Navbar from './Navbar.jsx';
+import { Footer } from './Footer.jsx';
+import { Jumbotron } from "./Jumbotron.jsx";
+import { Alert } from "./Alert.jsx";
+import { Spinner } from "./Spinner.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
+
+// 1.- Create your first component
 const Home = () => {
+	// 3.- Escribir mi code JS
+
+	// 4.- Retornar UN Solo elemento HTML (uno y solo uno)
 	return (
 		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
+			<Navbar/>
+			<Alert/>
+			<Spinner/>
+			<h1 className="text-center mt-5">Intro to React</h1>
+			<Jumbotron/>
+			{/* 
+				<p>
+					<img src={rigoImage} />
+				</p> 
+			*/}
 			<a href="#" className="btn btn-success">
 				If you see this green button... bootstrap is working...
 			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+
+			<Footer/>
 		</div>
+
 	);
 };
 
+// 2. Exportar el Componente (ponerlo disponible para otro archivo)
 export default Home;
