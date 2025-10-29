@@ -5,6 +5,7 @@ import { Footer } from './Footer.jsx';
 import { Jumbotron } from "./Jumbotron.jsx";
 import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
+import {Card} from "./Card.jsx";
 
 
 
@@ -19,6 +20,9 @@ const Home = () => {
 			<Alert/>
 			<Spinner/>
 			<h1 className="text-center mt-5">Intro to React</h1>
+			<Card name={'Ezequiel'} role={'Frontend'} url={'https://randomuser.me/api/portraits/men/42.jpg'}/>
+			<Card name={'Gustavo'} role={'Backend'} url={'https://randomuser.me/api/portraits/men/93.jpg'}/>
+			<Card name={'Alex'} roel={'Fullstack'} url={'https://randomuser.me/api/portraits/men/12.jpg'}/>
 			<Jumbotron/>
 			{/* 
 				<p>
