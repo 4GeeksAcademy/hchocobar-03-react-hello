@@ -6,6 +6,7 @@ import { Jumbotron } from "./Jumbotron.jsx";
 import { Alert } from "./Alert.jsx";
 import { Spinner } from "./Spinner.jsx";
 import {Card} from "./Card.jsx";
+import { ExampleUseState } from "./ExampleUseState.jsx";
 
 
 
@@ -17,6 +18,8 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
+			<ExampleUseState/>
+			{/* 			
 			<Alert/>
 			<Spinner/>
 			<h1 className="text-center mt-5">Intro to React</h1>
@@ -24,15 +27,7 @@ const Home = () => {
 			<Card name={'Gustavo'} role={'Backend'} url={'https://randomuser.me/api/portraits/men/93.jpg'}/>
 			<Card name={'Alex'} roel={'Fullstack'} url={'https://randomuser.me/api/portraits/men/12.jpg'}/>
 			<Jumbotron/>
-			{/* 
-				<p>
-					<img src={rigoImage} />
-				</p> 
-			*/}
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-
+			*/}			
 			<Footer/>
 		</div>
 
