@@ -8,6 +8,7 @@ import { Spinner } from "./Spinner.jsx";
 import {Card} from "./Card.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
+import { Login } from "./Login.jsx";
 
 
 
@@ -19,8 +20,9 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
-			<SimpleCounter/>
+			<Login/>
 			{/* 			
+			<SimpleCounter/>
 			<ExampleUseState/>
 			<Alert/>
 			<Spinner/>
