@@ -5,13 +5,13 @@ export const Footer = () => {
 
   // Renderizo un solo elemento HTML
   return (
-    <>
+    <div className="mt-auto">
         <hr/>
-        <p className="mt-5">
+        <p>
           Made by{": "}
           <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with	love!
         </p>
-    </>
+    </div>
   )
 }
 

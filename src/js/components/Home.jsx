@@ -9,6 +9,7 @@ import {Card} from "./Card.jsx";
 import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
+import { TodoList } from "./TodoList.jsx";
 
 
 
@@ -18,10 +19,11 @@ const Home = () => {
 
 	// 4.- Retornar UN Solo elemento HTML (uno y solo uno)
 	return (
-		<div className="text-center">
+		<div className="text-center d-flex flex-column min-vh-100">
 			<Navbar/>
-			<Login/>
+			<TodoList/>
 			{/* 			
+			<Login/>
 			<SimpleCounter/>
 			<ExampleUseState/>
 			<Alert/>
