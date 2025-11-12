@@ -10,6 +10,7 @@ import { ExampleUseState } from "./ExampleUseState.jsx";
 import { SimpleCounter } from "./SimpleCounter.jsx";
 import { Login } from "./Login.jsx";
 import { TodoList } from "./TodoList.jsx";
+import { ExampleFetch } from "./ExampleFetch.jsx";
 
 
 
@@ -21,8 +22,9 @@ const Home = () => {
 	return (
 		<div className="text-center d-flex flex-column min-vh-100">
 			<Navbar/>
-			<TodoList/>
+			<ExampleFetch/>
 			{/* 			
+			<TodoList/>
 			<Login/>
 			<SimpleCounter/>
 			<ExampleUseState/>
